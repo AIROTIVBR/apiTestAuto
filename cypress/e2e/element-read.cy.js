@@ -1,13 +1,13 @@
 ///<reference types="cypress" />
 
-describe('Request and read elements',() => {
+describe('Request and read elements from posts',() => {
 
-    it('Displaying all elements', () =>{
+    it('Displaying elements from ', () =>{
         cy.request({
             method : 'GET',
             url : 'https://jsonplaceholder.typicode.com/posts'
         })
-        .then((response) =>{
+        .should((response) =>{
             response.body.forEach(element => {
                 cy.log(element.id)
                 expect(response.status).to.equal(200)
@@ -17,14 +17,11 @@ describe('Request and read elements',() => {
                 expect(element).to.have.property('body')
             })
         })
-    })
-
-    it('Displaying a specific element', () =>{
         cy.request({
             method : 'GET',
             url : 'https://jsonplaceholder.typicode.com/posts/5'
         })
-        .then((response) =>{
+        .should((response) =>{
             cy.log(response)
             expect(response.status).to.equal(200)
             expect(response.body.id).to.equal(5)
@@ -33,5 +30,25 @@ describe('Request and read elements',() => {
              expect(response.body).to.have.property('title')
             expect(response.body).to.have.property('body')
         })
-    })
+    });
+
+    it('Read elements from comments', () => {
+
+    });
+
+    it('Read elements from albums', () => {
+
+    });
+
+    it('Read elements from photos', () => {
+
+    });
+
+    it('Read elements from todos', () => {
+
+    });
+
+    it('Read elements from users', () => {
+
+    });
 })

@@ -1,7 +1,7 @@
 ///<reference types="cypress" />
 
 describe('Request and create a new element', () => {
-    it('Create a new element',()=>{
+    it('Create a new element in posts',()=>{
         cy.request({
             method : 'POST',
             url : 'https://jsonplaceholder.typicode.com/posts',
@@ -11,7 +11,7 @@ describe('Request and create a new element', () => {
                 userId: 8,
               },
         })
-        .then((response) => {
+        .should((response) => {
             cy.log(response)
             expect(response.status).to.equal(201)
             expect(response.body.id).to.equal(101)
@@ -20,4 +20,24 @@ describe('Request and create a new element', () => {
             expect(response.body).to.have.property('body', 'I am the body of the new element and I am here to stay')
         })
     })
+
+    it('Create a new element in comments', () => {
+
+    });
+
+    it('Create a new element in albums', () => {
+
+    });
+
+    it('Create a new element in photos', () => {
+
+    });
+
+    it('Create a new element in todos', () => {
+
+    });
+
+    it('Create a new element in users', () => {
+
+    });
 })
