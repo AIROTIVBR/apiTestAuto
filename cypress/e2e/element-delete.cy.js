@@ -5,9 +5,9 @@ describe('Request and delete an element',()=>{
     it('Delete a specific element from posts', () => {
         cy.request({
             method : 'DELETE',
-            url : 'https://jsonplaceholder.typicode.com/posts/28'
+            url : '/posts/28'
         })
-        .should((response) => {
+        .then((response) => {
             cy.log(response)
             expect(response.status).to.equal(200)
         })

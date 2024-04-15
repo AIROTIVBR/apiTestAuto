@@ -7,7 +7,7 @@ describe('Request filtered elements',() => {
     it('Filter elements from posts', () => {
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/posts?userId=10'
+            url : '/posts?userId=10'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -19,7 +19,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/posts?userId=10&id=91'
+            url : '/posts?userId=10&id=91'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -32,7 +32,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/posts?id=55'
+            url : '/posts?id=55'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -49,7 +49,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/comments?postId=92'
+            url : '/comments?postId=92'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -61,7 +61,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/comments?postId=10&id=48'
+            url : '/comments?postId=10&id=48'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -74,7 +74,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/comments?id=266'
+            url : '/comments?id=266'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -92,7 +92,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/albums?userId=9'
+            url : '/albums?userId=9'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -104,7 +104,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/albums?userId=10&id=94'
+            url : '/albums?userId=10&id=94'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -117,7 +117,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/albums?id=72'
+            url : '/albums?id=72'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -135,7 +135,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/photos?albumId=81'
+            url : '/photos?albumId=81'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -147,7 +147,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/photos?albumId=67&id=3324'
+            url : '/photos?albumId=67&id=3324'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -160,7 +160,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/photos?id=999'
+            url : '/photos?id=999'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -178,7 +178,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/todos?userId=2'
+            url : '/todos?userId=2'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -190,7 +190,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/todos?userId=3&id=52'
+            url : '/todos?userId=3&id=52'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -203,7 +203,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/todos?id=156'
+            url : '/todos?id=156'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -221,7 +221,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/users?id=10'
+            url : '/users?id=10'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -233,7 +233,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/users?name=Clementine Bauch&id=3'
+            url : '/users?name=Clementine Bauch&id=3'
         })
         .then((response) => {
             response.body.forEach(element => {
@@ -246,7 +246,7 @@ describe('Request filtered elements',() => {
 
         cy.request({
             method : 'GET',
-            url : 'https://jsonplaceholder.typicode.com/users?email=Lucio_Hettinger@annie.ca'
+            url : '/users?email=Lucio_Hettinger@annie.ca'
         })
         .then((response) => {
             response.body.forEach(element => {

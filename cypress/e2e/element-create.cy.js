@@ -4,14 +4,14 @@ describe('Request and create a new element', () => {
     it('Create a new element in posts',()=>{
         cy.request({
             method : 'POST',
-            url : 'https://jsonplaceholder.typicode.com/posts',
+            url : '/posts',
             body: {
                 title: 'New element',
                 body: 'I am the body of the new element and I am here to stay',
                 userId: 8,
               },
         })
-        .should((response) => {
+        .then((response) => {
             cy.log(response)
             expect(response.status).to.equal(201)
             expect(response.body.id).to.equal(101)
