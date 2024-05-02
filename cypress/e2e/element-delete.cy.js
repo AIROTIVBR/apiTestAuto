@@ -2,7 +2,7 @@
 
 describe('Request and delete an element',()=>{
 
-// -----------------POSTS----------------- 
+// -----------------POSTS-------------------- 
 
     it('Delete a specific element from posts', () => {
 
